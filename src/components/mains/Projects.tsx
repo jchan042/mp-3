@@ -88,13 +88,16 @@ const StyledButtons = styled.div`
 `;
 
 const StyledOutput = styled.p<{ $negative: boolean }>`
-  color: ${({ $negative }) => ($negative ? "red" : "black")};
-  font-size: calc(4px + 1.5vw);
-  text-align: center;
-  font-weight: bold;
-  margin: 1% 0;
+    && {
+        color: ${({ $negative }) => ($negative ? "red" : "black")};
+        font-size: calc(4px + 1.5vw);
+        text-align: center;
+        font-weight: bold;
+        margin: 2% 0;
+        width: 100%;
+        display: block;
+    }
 `;
-
 const ops: { label: string; op: Operation }[] = [
     { label: "+", op: "+" },
     { label: "-", op: "-" },
